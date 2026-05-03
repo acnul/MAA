@@ -92,14 +92,6 @@ export MAA_ADAPTER_PATH=checkpoints/maa/maa.pth
 python eval/VLMEvalKit/run.py --model maa_llava --data <DATASET_NAME>
 ```
 
-PowerShell:
-
-```powershell
-$env:MAA_BASE_MODEL = "liuhaotian/llava-v1.6-mistral-7b"
-$env:MAA_ADAPTER_PATH = "C:\path\to\maa.pth"
-python eval/VLMEvalKit/run.py --model maa_llava --data <DATASET_NAME>
-```
-
 The released checkpoint targets `liuhaotian/llava-v1.6-mistral-7b`. Other LLaVA variants are best-effort.
 
 ## Citation
