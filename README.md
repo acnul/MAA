@@ -5,7 +5,7 @@ Official code release for Robust Vision-Language Models via Manifold-Adversarial
 ## Links
 
 - Model checkpoint: [acnul/maa/maa.pth](https://huggingface.co/acnul/maa/blob/main/maa.pth)
-- Training data: [acnul/maa-datasets/maa-datasets.zip](https://huggingface.co/datasets/acnul/maa-datasets/blob/main/maa-datasets.zip)
+- Training data: [acnul/maa-datasets](https://huggingface.co/datasets/acnul/maa-datasets)
 - Base model: [liuhaotian/llava-v1.6-mistral-7b](https://huggingface.co/liuhaotian/llava-v1.6-mistral-7b)
 
 ## Installation
@@ -46,11 +46,20 @@ The checkpoint contains only adapter weights. The LLaVA base model is loaded sep
 
 ## Data
 
-Download and extract the paired training data:
+Download and extract the paired training data. The dataset is released as a multi-volume zip archive: `maa-datasets.z01`, `maa-datasets.z02`, ..., and `maa-datasets.zip`. All parts must be in the same directory before extraction.
 
 ```bash
-hf download acnul/maa-datasets maa-datasets.zip --repo-type dataset --local-dir data
-unzip data/maa-datasets.zip -d data
+mkdir -p data/maa-datasets-archive
+hf download acnul/maa-datasets \
+  --repo-type dataset \
+  --include "maa-datasets.z*" \
+  --include "maa-datasets.zip" \
+  --local-dir data/maa-datasets-archive
+
+# Install 7-Zip if it is not available.
+apt-get update && apt-get install -y p7zip-full
+
+7z x data/maa-datasets-archive/maa-datasets.zip -odata
 ```
 
 Expected layout:
