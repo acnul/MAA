@@ -104,9 +104,15 @@ python eval/VLMEvalKit/run.py --model maa_llava --data <DATASET_NAME>
 The released checkpoint targets `liuhaotian/llava-v1.6-mistral-7b`. Other LLaVA variants are best-effort.
 
 ## Citation
-
-The paper has been accepted to ICML 2026. The official BibTeX entry will be added after the camera-ready version appears in the ICML proceedings.
-
+```bib
+@inproceedings{li2026robust,
+  title={Robust Vision-Language Models via Manifold-Adversarial Adapters},
+  author={Hao Li and Zeyu Xiao and Junhao Zhou and Peng Liu and Yang Zhao and Wei Jia},
+  booktitle={Forty-third International Conference on Machine Learning},
+  year={2026},
+  url={https://openreview.net/forum?id=j3NoRf0n7d}
+}
+```
 ## Acknowledgements
 
 This repository builds on [LLaVA](https://github.com/haotian-liu/LLaVA) and [VLMEvalKit](https://github.com/open-compass/VLMEvalKit). The included upstream components retain their original Apache-2.0 license notices. Users are responsible for complying with the licenses of base models, datasets, and released checkpoints.
