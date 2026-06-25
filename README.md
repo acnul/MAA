@@ -4,6 +4,7 @@ Official code release for Robust Vision-Language Models via Manifold-Adversarial
 
 ## Links
 
+- Paper: [OpenReview](https://openreview.net/forum?id=j3NoRf0n7d)
 - Model checkpoint: [acnul/maa/maa.pth](https://huggingface.co/acnul/maa/blob/main/maa.pth)
 - Training data: [acnul/maa-datasets](https://huggingface.co/datasets/acnul/maa-datasets)
 - Base model: [liuhaotian/llava-v1.6-mistral-7b](https://huggingface.co/liuhaotian/llava-v1.6-mistral-7b)
